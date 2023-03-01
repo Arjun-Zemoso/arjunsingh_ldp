@@ -11,6 +11,10 @@ body{
     font-family: "RobotoSlab";
     src: url("./fonts/RobotoSlab/RobotoSlab-VariableFont_wght.ttf");
   }
+  @font-face {
+    font-family: "BabasNeue";
+    src: url("./fonts/BebasNeue/BebasNeue-Regular.ttf");
+  }
 
 .nav_bar{
     top: 0;
@@ -196,6 +200,8 @@ a{
 .gallery-img{
     object-fit: cover;
     border-radius: 3px;
+    height: 100%;
+    width: 100%;
 }
 
 .one{
@@ -235,7 +241,35 @@ a{
     grid-row: 4/5;
 }
 
+.tbl-data{
+    padding:5px;
+}
+
+.tbl-key{
+    font-family: "BabasNeue";
+    margin: 10px;
+    color: #1E96FC;
+    background-color: #FCF300;
+    border-radius: 3px;
+    border:2px solid #FCF300;
+    text-shadow: 1px 1px 1px 4px #000000;
+    font-size: 2rem;
+}
+
 .tbl{
     margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid #ffffff;
+    border-collapse: collapse;
+}
+
+.tbl-desc{
+    font-size: 1.5rem;
+    padding: 30px;
+}
+
+.tbl-row{
+    border: 2px solid #ffffff;
+
 }
