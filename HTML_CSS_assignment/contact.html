@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,600&family=Fredoka+One&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav_bar">
+        <div class="nav_item"><a href="./index.html"> Home </a></div>
+        <div class="nav_item"><a href="./about.html"> About</a></div>
+        <div class="nav_item">
+          <a class="active-tab" href="./contact.html"> Contact Me</a>
+        </div>
+        <div class="nav_item"><a href="./gallery.html"> Gallery</a></div>
+      </nav>
+    </header>
+    <div class="form-wrapper">
+      <form action="" class="form">
+        <div class="form-row">
+          <label class="form-label" for="name">Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="form-input"
+            id="name"
+          />
+        </div>
+        <div class="form-row">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-input"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form-row">
+          <label for="query" class="form-label">Query</label>
+          <textarea
+            name="query"
+            id="query"
+            cols="30"
+            rows="10"
+            class="form-query"
+          ></textarea>
+        </div>
+      </form>
+      <div class="form-btn">
+        <input id="sbt-btn" type="button" value="Submit" />
+      </div>
+    </div>
+  </body>
+</html>
