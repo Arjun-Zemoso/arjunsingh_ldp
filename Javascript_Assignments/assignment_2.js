@@ -28,7 +28,22 @@ const getData = ((uId)=>{
     }, 4000);
     })
 })
+console.log("start")
 getData("skc").then((data)=>{
     console.log("Email id of the user id is: " + data);
     console.log("end");
 })
+
+//Using async code
+const getDataAsync = async (uid) =>{
+    await new Promise ((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Fetched the data!");
+            resolve("skc@gmail.com")
+        },4000)
+    })
+}
+console.log("start")
+const asyncEmail = getDataAsync("skc");
+console.log("Email id of the user id is: " + asyncEmail);
+console.log("end");
