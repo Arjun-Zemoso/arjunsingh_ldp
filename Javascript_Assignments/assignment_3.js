@@ -19,6 +19,7 @@ const person = {
 
 const printName = name => `Hi ${name}`;
 const printBill = (name, bill) => `Hi ${name}, please pay: ${bill}`;
+console.log(printName,printBill)
 const person = {
     name: "Noam Chomsky",
     age: 92
