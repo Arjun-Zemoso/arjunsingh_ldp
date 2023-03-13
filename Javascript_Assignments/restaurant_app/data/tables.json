@@ -1,0 +1,46 @@
+{
+  "tables": [
+    {
+      "table_no": 1,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    },
+    {
+      "table_no": 2,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    },
+    {
+      "table_no": 3,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    },
+    {
+      "table_no": 4,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    },
+    {
+      "table_no": 5,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    },
+    {
+      "table_no": 6,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    },
+    {
+      "table_no": 7,
+      "total_items": 0,
+      "total_bill": 0.00,
+      "current_items": []
+    }
+  ]
+}

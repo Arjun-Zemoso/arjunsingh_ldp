@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: lato;
+    src: url(./fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: mukta;
+    src: url(./fonts/Mukta/Mukta-Light.ttf);
+}
+@font-face {
+    font-family: roboto-slab;
+    src: url(./fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+.container{
+    display: flex; 
+    background-color: #FFFFEF;
+}
+.tables{
+    display: flex;
+    width: 30%;
+    padding: 10px;
+    margin-left: 1%;
+    border-right: 2px solid black;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    overflow-y: auto;
+}
+.menu{
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    margin-left: 1%;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+   
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+.menu-card{
+    box-shadow: 10px 10px #EFEFEF;
+    height: 120px;
+    padding: 10px;
+}
+.table-list{
+    overflow-y: auto;
+}
+.table-card{
+    box-shadow: 5px 5px #EFEFEF;
+    height: 120px;
+}
+
+.menu-head{
+    font-family: lato;
+
+}
+.table-no{
+    pointer-events: none;
+    font-family: lato;
+}
+.total-items{
+    font-family: mukta;
+    pointer-events: none;
+}
+.total-items::before{
+    content: " | Total Items: ";
+}
+.table-bill{
+    font-family: mukta;
+    pointer-events: none;
+}
+.table-bill::before{
+    content: "Rs.";
+}
+.table-no{
+    font-family: lato;
+}
+.table-no::before{
+    content: "Table-";
+}
+.menu-price{
+    font-family: mukta;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+h3{
+    align-self: center;
+    font-family: roboto-slab;
+}  
+.inp-search{
+    height: 1.7rem;
+    font-family: roboto-slab;
+    padding: 2px;
+    box-shadow: 3px 3px #EFEFEF;
+    outline: none !important;
+    border: none;
+    background-color: #eeeee0;
+    z-index: 1;
+    
+}
+.inp-table{
+    width: 90%;
+}
+.inp-menu{
+    width: 70%;
+}
+.cuisine{
+    font-family: mukta;
+    margin: 3px;
+    font-weight: 600;
+    display: inline;
+    
+}
+.cuisine::after{
+    content: " |";
+}
+.course{
+    display: inline;
+    font-family: mukta;
+    margin: 3px;
+}
+.is_hidden{
+    display: none;
+}
+.popup{
+    /* display: none; */
+    position: fixed;
+    background-color: #e0e0e0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    margin-left: auto;
+    margin-top: auto;
+    height: 50vh;
+    width: 45vw;
+    z-index: 5;
+    border-radius: 10px;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+.popup-head{
+    display: flex;
+    background-color: #1565C0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.popup-title::before{
+    content: 'Table - ';
+}
+.close-button{
+    content: 'U+1F5D9';
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.popup-table{
+    width: 100%;
+    padding:5px;
+}
+tr{
+    margin-bottom: 5px;
+}
+td{
+    text-align: center;
+}
+.popup-input{
+    padding: 5px;
+    width: 80%;
+    outline: none;
+    border: none;
+}
+.popup-input:focus{
+    border-bottom: 2px solid #1565C0;
+}
+.material-symbols-outlined{
+    cursor: pointer;
+}
+.table-header{
+    font-weight: bold;
+}
+.total-bill{
+    
+}
+.total-bill::before{
+    content: "Total :-";
+    font-weight: bold;
+}
+.generate-bill{
+    margin-left: 30px;
+    background-color: #1565C0;
+    color: #FFFFEF;
+    padding: 5px;
+    border-radius: 5px;
+}
+.menu-price::before , .total-bill::before {
+    content: "Rs. ";
+}

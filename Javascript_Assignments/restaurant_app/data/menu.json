@@ -1,0 +1,124 @@
+{
+    "menu": [
+      {
+        "name": "Samosa",
+        "cuisine": "Indian",
+        "type": "Starter",
+        "price": 50
+      },
+      {
+        "name": "Pakora",
+        "cuisine": "Indian",
+        "type": "Starter",
+        "price": 60
+      },
+      {
+        "name": "Butter Chicken",
+        "cuisine": "Indian",
+        "type": "Main",
+        "price": 250
+      },
+      {
+        "name": "Vegetable Biryani",
+        "cuisine": "Indian",
+        "type": "Main",
+        "price": 200
+      },
+      {
+        "name": "Gulab Jamun",
+        "cuisine": "Indian",
+        "type": "Dessert",
+        "price": 70
+      },
+      {
+        "name": "Ras Malai",
+        "cuisine": "Indian",
+        "type": "Dessert",
+        "price": 80
+      },
+      {
+        "name": "Escargots",
+        "cuisine": "French",
+        "type": "Starter",
+        "price": 150
+      },
+      {
+        "name": "French Onion Soup",
+        "cuisine": "French",
+        "type": "Starter",
+        "price": 120
+      },
+      {
+        "name": "Chicken Cordon Bleu",
+        "cuisine": "French",
+        "type": "Main",
+        "price": 300
+      },
+      {
+        "name": "Quiche Lorraine",
+        "cuisine": "French",
+        "type": "Main",
+        "price": 350
+      },
+      {
+        "name": "Crème Brûlée",
+        "cuisine": "French",
+        "type": "Dessert",
+        "price": 100
+      },
+      {
+        "name": "Tarte Tatin",
+        "cuisine": "French",
+        "type": "Dessert",
+        "price": 120
+      },
+      {
+        "name": "Spring Rolls",
+        "cuisine": "Chinese",
+        "type": "Starter",
+        "price": 80
+      },
+      {
+        "name": "Dim Sum",
+        "cuisine": "Chinese",
+        "type": "Starter",
+        "price": 100
+      },
+      {
+        "name": "Kung Pao Tofu",
+        "cuisine": "Chinese",
+        "type": "Main",
+        "price": 200
+      },
+      {
+        "name": "Vegetable Chow Mein",
+        "cuisine": "Chinese",
+        "type": "Main",
+        "price": 220
+      },
+      {
+        "name": "Mooncake",
+        "cuisine": "Chinese",
+        "type": "Dessert",
+        "price": 80
+      },
+      {
+        "name": "Sesame Balls",
+        "cuisine": "Chinese",
+        "type": "Dessert",
+        "price": 90
+      },
+      {
+        "name": "Quesadilla",
+        "cuisine": "Mexican",
+        "type": "Starter",
+        "price": 120
+      },
+      {
+        "name": "Guacamole",
+        "cuisine": "Mexican",
+        "type": "Starter",
+        "price": 90
+      }
+    ]
+}
