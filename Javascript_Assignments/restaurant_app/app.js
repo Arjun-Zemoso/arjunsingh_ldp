@@ -88,12 +88,12 @@ const renderTable = (tablesData) => {
     }
 
 }
-const popupGeneration= (event) => {
+const popupGeneration = (event) => {
     let tableIndex = parseInt(event.target.id);
     // console.log(tableIndex);
     //Creating Popup
     let popup = document.createElement('div');
-    popup.setAttribute('id','popup'+tableIndex);
+    popup.setAttribute('id', 'popup' + tableIndex);
     popup.classList.add('popup');
     let popupHead = document.createElement('div');
     popupHead.classList.add('popup-head');
@@ -104,6 +104,8 @@ const popupGeneration= (event) => {
     closeButton.textContent = "\uD83D\uDDD9";
     popupTitle.textContent = tableIndex + 1;
     popupHead.append(popupTitle, closeButton);
+    let tableContainer=document.createElement('div');
+    tableContainer.classList.add('table-container');
     let popupTable = document.createElement('table');
     popupTable.classList.add('popup-table');
     let tableHeaderRow = document.createElement('tr');
@@ -142,26 +144,34 @@ const popupGeneration= (event) => {
         let deleteIcon = document.createElement('span');
         deleteIcon.classList.add('material-symbols-outlined');
         deleteIcon.textContent = 'delete'
-        deleteIcon.setAttribute("data-table",tableIndex);
-        deleteIcon.setAttribute("data-item",item);
+        deleteIcon.setAttribute("data-table", tableIndex);
+        deleteIcon.setAttribute("data-item", item);
         tableDataDelete.appendChild(deleteIcon);
         deleteIcon.addEventListener('click', (event) => { handleItemDelete(event) })
         tableRow.append(tableDataSno, tableDataItem, tableDataPrice, tableNoOfUnits, tableDataDelete);
-        tableRow.setAttribute("id",item+tableIndex.toString());
+        tableRow.setAttribute("id", item + tableIndex.toString());
         popupTable.appendChild(tableRow);
     }
+    let billRow=document.createElement('tr');
+    let td1=document.createElement('td');
+    let td2=document.createElement('td');
     let totalBill = document.createElement('span');
+    totalBill.setAttribute('colspan',2);
+    totalBill.setAttribute('text-align','left');
     totalBill.classList.add('total-bill');
     let totalBillId = 'bill' + tableIndex;
     totalBill.setAttribute('id', totalBillId);
-    let generateBill=document.createElement('button');
-    generateBill.textContent="Generate Bill";
+    billRow.append(td1,td2,totalBill);
+    popupTable.appendChild(billRow)
+    let generateBill = document.createElement('button');
+    generateBill.textContent = "Generate Bill";
     generateBill.classList.add('generate-bill');
-    popup.append(popupHead, popupTable, totalBill,generateBill);
+    tableContainer.appendChild(popupTable);
+    popup.append(popupHead, tableContainer, generateBill);
     document.body.appendChild(popup);
     totalBill.textContent = getTotalBill(tableIndex);
-    generateBill.addEventListener('click',()=>{
-        alert('Bill for Table '+tableIndex + 1 +' is '+getTotalBill(tableIndex));
+    generateBill.addEventListener('click', () => {
+        alert('Bill for Table ' + tableIndex + 1 + ' is ' + getTotalBill(tableIndex));
         document.body.removeChild(popup);
     })
     closeButton.addEventListener('click', () => document.body.removeChild(popup));
@@ -187,25 +197,25 @@ const handleChangeInUnitsInput = (event) => {
 }
 const handleItemDelete = (event) => {
     // console.log(event.target);
-    let tableIndex=parseInt(event.target.getAttribute("data-table"));
-    let item=event.target.getAttribute("data-item");
+    let tableIndex = parseInt(event.target.getAttribute("data-table"));
+    let item = event.target.getAttribute("data-item");
     // console.log(tableIndex,item);
-    let itemsArray= tablesJSONData[tableIndex].current_items;
+    let itemsArray = tablesJSONData[tableIndex].current_items;
     let indexItem;
-    for(let indexItem=0;indexItem<itemsArray.length;indexItem++){
+    for (let indexItem = 0; indexItem < itemsArray.length; indexItem++) {
         let tableItem = Object.keys(itemsArray[indexItem])[0];
-        if (item === tableItem){
+        if (item === tableItem) {
             break;
         }
     }
-    tablesJSONData[tableIndex].current_items.splice(indexItem,1);
-    
+    tablesJSONData[tableIndex].current_items.splice(indexItem, 1);
+
     let e = {
         target: {
-          id: tableIndex
+            id: tableIndex
         }
-      };
-    let oldPopup=document.querySelector('#popup'+tableIndex);
+    };
+    let oldPopup = document.querySelector('#popup' + tableIndex);
     document.body.removeChild(oldPopup);
     popupGeneration(e);
     updateTableBillAndItems(tableIndex);
